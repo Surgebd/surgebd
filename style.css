@@ -1,0 +1,96 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body { line-height: 1.6; background: #fff; scroll-behavior: smooth; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+/* TOP BAR */
+.top-bar { background-color: #ff0000; padding: 8px 0; width: 100%; }
+.contact-top { display: flex; justify-content: space-between; align-items: center; }
+.top-bar a { color: #ffffff !important; text-decoration: none; font-size: 13px; font-weight: 500; display: flex; align-items: center; white-space: nowrap; }
+.top-bar i { margin-right: 4px; color: #ffffff; font-size: 12px; }
+
+/* HEADER */
+header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 10px 0; position: sticky; top: 0; z-index: 1000; }
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.company-logo { height: 100px; width: auto; display: block; object-fit: contain; }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 20px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 600; font-size: 17px; }
+nav ul li a:hover { color: #ff0000; }
+
+/* HERO */
+.hero {
+    height: 75vh;
+    min-height: 450px;
+    background: url('images/cover.jpg') center center / cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
+.hero-container { position: relative; z-index: 1; width: 100%; }
+.hero-content { padding-bottom: 50px; padding-inline: 15px; }
+.company-name { font-size: 3rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); white-space: nowrap; }
+.hero-content p { font-size: 1.3rem; text-shadow: 1px 1px 5px rgba(0,0,0,0.8); }
+
+/* SERVICES */
+.services { padding: 60px 0; background: #f9f9f9; }
+.section-title { text-align: center; margin-bottom: 40px; font-size: 2.2rem; }
+.section-title::after { content: ''; display: block; width: 60px; height: 3px; background: #ff0000; margin: 10px auto; }
+.service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.service-card { background: #fff; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+.service-card i { font-size: 2.5rem; color: #ff0000; margin-bottom: 15px; }
+
+/* GALLERY */
+.gallery { padding: 60px 0; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.gallery-item { height: 280px; overflow: hidden; border-radius: 8px; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.4s; }
+.gallery-item:hover img { transform: scale(1.05); }
+
+/* CONTACT - WHITE THEME */
+.contact { padding: 50px 0; background: #1a1a1a; color: #fff; }
+.contact-vertical-list { max-width: 700px; margin: 0 auto; }
+.contact-box-v { display: flex; align-items: flex-start; margin-bottom: 20px; background: rgba(255,255,255,0.05); padding: 18px; border-radius: 8px; text-decoration: none; color: #fff; transition: 0.3s; width: 100%; }
+.contact-box-v:hover { background: rgba(255,255,255,0.1); transform: translateY(-3px); }
+.contact-box-v i { font-size: 1.5rem; color: #fff; margin-right: 20px; margin-top: 5px; width: 30px; text-align: center; }
+.contact-box-v strong { color: #fff; display: block; margin-bottom: 3px; font-size: 16px; }
+.contact-box-v p { font-size: 15px; color: #fff; line-height: 1.5; }
+
+/* WHATSAPP & FOOTER */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: #fff; padding: 10px 18px; border-radius: 50px; text-decoration: none; z-index: 1000; display: flex; align-items: center; gap: 10px; font-weight: bold; box-shadow: 2px 2px 10px rgba(0,0,0,0.2); }
+footer { background: #111; color: #777; text-align: center; padding: 25px 0; border-top: 1px solid #222; }
+
+/* MOBILE RESPONSIVE CORRECTIONS */
+@media (max-width: 768px) {
+    /* Navbar spacing */
+    .navbar { flex-direction: column; gap: 12px; }
+    nav ul { gap: 15px; justify-content: center; width: 100%; }
+    nav ul li { margin-left: 0; }
+    .company-logo { height: 70px; }
+
+    /* Cover (Hero) Correction - Less height on mobile */
+    .hero { height: 40vh; min-height: 280px; }
+    .company-name { font-size: 5.5vw; }
+    .hero-content p { font-size: 3.5vw; }
+
+    /* Core Services Correction - Single column */
+    .service-grid { grid-template-columns: 1fr; }
+
+    /* Gallery Correction - Single picture per row */
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item { height: auto; }
+
+    /* Contact Correction - Full Width (Wide) */
+    .contact-vertical-list { width: 100%; padding: 0 10px; }
+    .contact-box-v { margin-bottom: 15px; }
+}
