@@ -89,49 +89,48 @@ footer { background: #111; color: #777; text-align: center; padding: 25px 0; bor
     /* Gallery Correction - Single picture per row */
     .gallery-grid { grid-template-columns: 1fr; }
     .gallery-item { height: auto; }
-/* ... apnar ager shob code ekhane thakbe ... */
-
-/* WHATSAPP & FOOTER */
-.whatsapp-float { ... }
-footer { ... }
-
-/* --- EKDOM NICHE EI CODE-TUKU PASTE KORUN --- */
-
 @media (max-width: 768px) {
+    /* Container er bhetore kono faka jaiga rakhbo na jate puro width pawa jay */
+    .top-bar .container {
+        padding: 0 5px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
     .contact-top {
         display: flex !important;
         flex-direction: row !important;
-        justify-content: space-between !important; 
+        justify-content: space-around !important; /* Elements gulo ke center e kachakachi rakhbe */
         align-items: center !important;
-        flex-wrap: nowrap !important; 
-        gap: 4px; 
+        flex-wrap: nowrap !important;
+        gap: 2px; /* Gap ekdom komiye deya hoyeche */
     }
 
     .top-bar a {
-        font-size: 9px !important; 
-        font-weight: 500;
-        letter-spacing: -0.3px; 
+        font-size: 10.5px !important; /* Ekhon text clear dekhabe */
+        font-weight: 600; /* Font ektu bold korlam jate choto holeo clear thake */
+        letter-spacing: -0.4px; /* Word spacing komiye jaiga bachanu hoyeche */
+        display: flex;
+        align-items: center;
     }
 
     .top-bar i {
-        font-size: 10px !important;
-        margin-right: 2px !important; 
+        font-size: 11px !important;
+        margin-right: 2px !important; /* Icon ar text er majhe space nai bollei chole */
     }
 
-    .top-bar .container {
-        padding: 0 5px !important;
-        max-width: 100% !important;
+    /* Email address jodi beshi boro hoye jay, tobe text ektu chapiye dibe */
+    .top-email a {
+        letter-spacing: -0.6px;
     }
 }
 
-/* Screen size jodi aro choto hoy */
-@media (max-width: 360px) {
+/* Khub choto screen er (e.g. 320px) jonno font ektu adjust kora */
+@media (max-width: 350px) {
     .top-bar a {
-        font-size: 8px !important;
-        letter-spacing: -0.4px;
+        font-size: 9.5px !important;
     }
-}
-    /* Contact Correction - Full Width (Wide) */
-    .contact-vertical-list { width: 100%; padding: 0 10px; }
-    .contact-box-v { margin-bottom: 15px; }
+    .contact-top {
+        gap: 1px;
+    }
 }
