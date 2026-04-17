@@ -89,7 +89,48 @@ footer { background: #111; color: #777; text-align: center; padding: 25px 0; bor
     /* Gallery Correction - Single picture per row */
     .gallery-grid { grid-template-columns: 1fr; }
     .gallery-item { height: auto; }
+/* ... apnar ager shob code ekhane thakbe ... */
 
+/* WHATSAPP & FOOTER */
+.whatsapp-float { ... }
+footer { ... }
+
+/* --- EKDOM NICHE EI CODE-TUKU PASTE KORUN --- */
+
+@media (max-width: 768px) {
+    .contact-top {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important; 
+        align-items: center !important;
+        flex-wrap: nowrap !important; 
+        gap: 4px; 
+    }
+
+    .top-bar a {
+        font-size: 9px !important; 
+        font-weight: 500;
+        letter-spacing: -0.3px; 
+    }
+
+    .top-bar i {
+        font-size: 10px !important;
+        margin-right: 2px !important; 
+    }
+
+    .top-bar .container {
+        padding: 0 5px !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Screen size jodi aro choto hoy */
+@media (max-width: 360px) {
+    .top-bar a {
+        font-size: 8px !important;
+        letter-spacing: -0.4px;
+    }
+}
     /* Contact Correction - Full Width (Wide) */
     .contact-vertical-list { width: 100%; padding: 0 10px; }
     .contact-box-v { margin-bottom: 15px; }
